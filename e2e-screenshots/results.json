@@ -1,0 +1,312 @@
+{
+  "passed": [
+    {
+      "path": "/dashboard",
+      "name": "Dashboard"
+    },
+    {
+      "path": "/students",
+      "name": "Students"
+    },
+    {
+      "path": "/admission",
+      "name": "Admission"
+    },
+    {
+      "path": "/attendance",
+      "name": "Attendance"
+    },
+    {
+      "path": "/period-attendance",
+      "name": "Period Attendance"
+    },
+    {
+      "path": "/syllabus",
+      "name": "Syllabus"
+    },
+    {
+      "path": "/timetable",
+      "name": "Timetable"
+    },
+    {
+      "path": "/lms",
+      "name": "LMS Hub"
+    },
+    {
+      "path": "/compliance",
+      "name": "Compliance"
+    },
+    {
+      "path": "/assessments",
+      "name": "Assessments"
+    },
+    {
+      "path": "/assignments",
+      "name": "Assignments"
+    },
+    {
+      "path": "/question-bank",
+      "name": "Question Bank"
+    },
+    {
+      "path": "/grading",
+      "name": "Grading"
+    },
+    {
+      "path": "/report-cards",
+      "name": "Report Cards"
+    },
+    {
+      "path": "/analytics",
+      "name": "Analytics"
+    },
+    {
+      "path": "/users",
+      "name": "Users"
+    },
+    {
+      "path": "/bus",
+      "name": "Bus Tracking"
+    },
+    {
+      "path": "/notifications",
+      "name": "Notifications"
+    },
+    {
+      "path": "/teacher-attendance",
+      "name": "Teacher Attendance"
+    },
+    {
+      "path": "/exam-schedule",
+      "name": "Exam Schedule"
+    },
+    {
+      "path": "/substitutes",
+      "name": "Substitutes"
+    },
+    {
+      "path": "/documents",
+      "name": "Documents"
+    },
+    {
+      "path": "/leaves",
+      "name": "Leave Requests"
+    },
+    {
+      "path": "/transfer-certificates",
+      "name": "Transfer Certificates"
+    },
+    {
+      "path": "/calendar",
+      "name": "Calendar"
+    },
+    {
+      "path": "/announcements",
+      "name": "Announcements"
+    },
+    {
+      "path": "/settings",
+      "name": "Settings"
+    },
+    {
+      "path": "/audit",
+      "name": "Audit Logs"
+    },
+    {
+      "path": "/bulk-operations",
+      "name": "Bulk Operations"
+    },
+    {
+      "path": "/reports",
+      "name": "Reports"
+    },
+    {
+      "path": "/expenses",
+      "name": "Expenses"
+    },
+    {
+      "path": "/alumni",
+      "name": "Alumni"
+    },
+    {
+      "path": "/staff-directory",
+      "name": "Staff Directory"
+    },
+    {
+      "path": "/gallery",
+      "name": "Gallery"
+    },
+    {
+      "path": "/library",
+      "name": "Library"
+    },
+    {
+      "path": "/visitors",
+      "name": "Visitors"
+    },
+    {
+      "path": "/inventory",
+      "name": "Inventory"
+    },
+    {
+      "path": "/health",
+      "name": "Health Records"
+    },
+    {
+      "path": "/hostel",
+      "name": "Hostel"
+    },
+    {
+      "path": "/payroll",
+      "name": "Payroll"
+    },
+    {
+      "path": "/grievances",
+      "name": "Grievances"
+    },
+    {
+      "path": "/room-booking",
+      "name": "Room Booking"
+    },
+    {
+      "path": "/meetings",
+      "name": "Meetings"
+    },
+    {
+      "path": "/events",
+      "name": "Events"
+    },
+    {
+      "path": "/surveys",
+      "name": "Surveys"
+    },
+    {
+      "path": "/feedback",
+      "name": "Feedback"
+    },
+    {
+      "path": "/certificates",
+      "name": "Certificates"
+    },
+    {
+      "path": "/concessions",
+      "name": "Concessions"
+    },
+    {
+      "path": "/transport-billing",
+      "name": "Transport Billing"
+    },
+    {
+      "path": "/homework-calendar",
+      "name": "Homework Calendar"
+    },
+    {
+      "path": "/diary",
+      "name": "Diary"
+    },
+    {
+      "path": "/course-modules",
+      "name": "Course Modules"
+    },
+    {
+      "path": "/discussions",
+      "name": "Discussion Forums"
+    },
+    {
+      "path": "/learning-paths",
+      "name": "Learning Paths"
+    },
+    {
+      "path": "/gamification",
+      "name": "Gamification"
+    },
+    {
+      "path": "/rubrics",
+      "name": "Rubrics"
+    },
+    {
+      "path": "/speed-grader",
+      "name": "Speed Grader"
+    },
+    {
+      "path": "/live-classes",
+      "name": "Live Classes"
+    },
+    {
+      "path": "/id-cards",
+      "name": "ID Cards"
+    },
+    {
+      "path": "/message-logs",
+      "name": "Message Logs"
+    },
+    {
+      "path": "/file-browser",
+      "name": "File Manager"
+    },
+    {
+      "path": "/performance-report",
+      "name": "Performance Report"
+    },
+    {
+      "path": "/academic-transition",
+      "name": "Academic Transition"
+    },
+    {
+      "path": "/result-workflow",
+      "name": "Result Workflow"
+    },
+    {
+      "path": "/remedial",
+      "name": "Remedial"
+    },
+    {
+      "path": "/grace-marks",
+      "name": "Grace Marks"
+    },
+    {
+      "path": "/classes",
+      "name": "Classes & Sections"
+    }
+  ],
+  "failed": [
+    {
+      "path": "/fees",
+      "name": "Fee Management",
+      "errors": [
+        "Page appears empty or has minimal content"
+      ]
+    },
+    {
+      "path": "/hobbies",
+      "name": "Hobbies",
+      "errors": [
+        "Page appears empty or has minimal content"
+      ]
+    },
+    {
+      "path": "/promotions",
+      "name": "Promotions",
+      "errors": [
+        "Page appears empty or has minimal content"
+      ]
+    }
+  ],
+  "errors": [
+    {
+      "path": "/discipline",
+      "name": "Discipline",
+      "error": "net::ERR_ABORTED at http://localhost:3001/discipline"
+    },
+    {
+      "path": "/communication",
+      "name": "Communication",
+      "error": "net::ERR_ABORTED at http://localhost:3001/communication"
+    },
+    {
+      "path": "/fee-automation",
+      "name": "Fee Automation",
+      "error": "net::ERR_ABORTED at http://localhost:3001/fee-automation"
+    }
+  ]
+}
