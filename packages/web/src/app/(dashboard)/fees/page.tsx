@@ -6,7 +6,7 @@ import { CreditCard, AlertTriangle, TrendingDown, DollarSign, Phone, X, Plus } f
 interface FeeHead {
   id: string;
   name: string;
-  class: string;
+  class: string | { name: string };
   amount: number;
   frequency: string;
 }

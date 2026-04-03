@@ -73,6 +73,7 @@ import {
   MessagesSquare,
   Trophy,
   HardDrive,
+  Target,
 } from 'lucide-react';
 
 const allNavigation = [
@@ -170,6 +171,8 @@ const allNavigation = [
   { name: 'Course Modules', href: '/course-modules', icon: Layers },
   { name: 'Discussions', href: '/discussions', icon: MessagesSquare },
   { name: 'Gamification', href: '/gamification', icon: Trophy },
+  // Phase 24 — Teaching Tracking
+  { name: 'Teaching Tracker', href: '/teaching', icon: Target },
   // Audit
   { name: 'Audit Logs', href: '/audit', icon: ScrollText },
 ];
@@ -186,6 +189,7 @@ const roleNavMap: Record<string, string[]> = {
     'Classes & Sections', 'Performance Report',
     'Learning Paths', 'Rubrics', 'Live Classes',
     'Course Modules', 'Discussions', 'Gamification',
+    'Teaching Tracker',
   ],
   ACADEMIC_COORDINATOR: [
     'Dashboard', 'Students', 'Syllabus', 'Compliance', 'Assessments',
@@ -196,6 +200,7 @@ const roleNavMap: Record<string, string[]> = {
     'Diary', 'Events', 'Classes & Sections', 'Performance Report',
     'Learning Paths', 'Rubrics', 'Speed Grader', 'Live Classes',
     'Course Modules', 'Discussions', 'Gamification',
+    'Teaching Tracker',
   ],
   CLASS_TEACHER: [
     'Dashboard', 'Students', 'Attendance', 'Period Attendance', 'Syllabus', 'Timetable',
@@ -204,6 +209,7 @@ const roleNavMap: Record<string, string[]> = {
     'Diary', 'Events',
     'Learning Paths', 'Rubrics', 'Speed Grader', 'Live Classes',
     'Course Modules', 'Discussions', 'Gamification',
+    'Teaching Tracker',
   ],
   SUBJECT_TEACHER: [
     'Dashboard', 'Attendance', 'Period Attendance', 'Syllabus', 'Assignments', 'Grading',
@@ -211,6 +217,7 @@ const roleNavMap: Record<string, string[]> = {
     'Result Workflow', 'Remedial', 'Grievances', 'Diary',
     'Learning Paths', 'Rubrics', 'Speed Grader', 'Live Classes',
     'Course Modules', 'Discussions', 'Gamification',
+    'Teaching Tracker',
   ],
   ACCOUNTANT: ['Dashboard', 'Fee Management', 'Fee Automation', 'Reports', 'Concessions', 'Payroll', 'Hostel', 'Expenses'],
   TRANSPORT_MANAGER: ['Dashboard', 'Bus Tracking'],

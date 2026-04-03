@@ -87,7 +87,7 @@ cd packages/web
 npx next dev --port 3001
 ```
 
-### 5. Access
+### 5. Access (Local)
 
 | Service | URL |
 |---|---|
@@ -95,12 +95,30 @@ npx next dev --port 3001
 | **API** | http://localhost:4002/api/v1 |
 | **MinIO Console** | http://localhost:9001 |
 
-### Default Login
+---
 
-| Role | Email | Password |
-|---|---|---|
-| Super Admin | admin@school.edu.in | admin123 |
-| Teacher | teacher@school.edu.in | teacher123 |
+## Live Demo
+
+The application is deployed and available for testing:
+
+| Page | URL |
+|---|---|
+| **Landing Page** | https://globuslms.globusdemos.com |
+| **Features** | https://globuslms.globusdemos.com/features |
+| **Pricing** | https://globuslms.globusdemos.com/pricing |
+| **Login** | https://globuslms.globusdemos.com/login |
+| **API Docs (Swagger)** | https://globuslms.globusdemos.com/api/docs |
+
+### Demo Credentials
+
+| Role | Email | Password | Access |
+|---|---|---|---|
+| **Admin/Principal** | `admin@medicaps.edu.in` | `admin123` | Full access — 82 menu items |
+| **Teacher** | `teacher@medicaps.edu.in` | `teacher123` | 27 menu items — attendance, grading, teaching tracker |
+| **Student** | `aarav.singh.10a@student.medicaps.edu.in` | `student123` | 15 menu items — timetable, assignments, gamification |
+| **Parent** | `parent.mis10a007@school.edu` | `parent123` | 9 menu items — ward overview, communication |
+
+Additional teacher accounts: `arun.patel@medicaps.edu.in`, `kavita.dubey@medicaps.edu.in`, `sanjay.mishra@medicaps.edu.in` (all use password `teacher123`)
 
 ---
 
@@ -110,14 +128,15 @@ npx next dev --port 3001
 globussoft-open-school-mis/
 ├── packages/
 │   ├── shared/              # Shared types, constants, validators
-│   ├── api/                 # NestJS backend (85+ modules)
-│   │   ├── prisma/          # MySQL schema & seed scripts
-│   │   ├── src/modules/     # Feature modules
-│   │   └── test/            # E2E test suites
-│   └── web/                 # Next.js 14 frontend (80+ pages)
+│   ├── api/                 # NestJS backend (77+ modules)
+│   │   ├── prisma/          # MySQL schema (128 models) & seed scripts
+│   │   └── src/modules/     # Feature modules (77 controllers)
+│   └── web/                 # Next.js 14 frontend (77+ pages)
 │       └── src/app/
-│           ├── login/       # Authentication pages
-│           └── (dashboard)/ # Role-based dashboard
+│           ├── (marketing)/ # Landing page, features, pricing
+│           ├── login/       # Authentication
+│           └── (dashboard)/ # Role-based dashboard (82 nav items)
+├── e2e-api-tests.js         # 516 E2E API tests (100% coverage)
 ├── docker-compose.yml       # MySQL 8 + Redis 7 + MinIO
 ├── turbo.json               # Turborepo config
 └── package.json             # Root workspace config
@@ -126,6 +145,12 @@ globussoft-open-school-mis/
 ---
 
 ## Modules Overview
+
+### New Features (April 2026)
+- **Smart Timetable Wizard** — 4-step flow: Select Class → Assign Teachers to Subjects → Auto-Generate → View & Edit. Includes slot editing modal and conflict detection.
+- **Teaching Tracker** — Real-time classroom tracking. Teachers can start/pause/complete teaching sessions, tap to mark each topic/video/image as covered, with live elapsed timer and progress tracking.
+- **Enhanced Role-Based Dashboards** — Admin dashboard with KPI trends, 7-day attendance chart, fee collection summary, alerts. Teacher dashboard with today's schedule, pending tasks, student performance bars. Student dashboard with attendance %, subject grades, deadlines with countdown, achievements.
+- **Marketing Website** — Full landing page with 77-feature showcase, features page, pricing page (₹199/₹349/₹499 plans), comparison table, and FAQ.
 
 ### Core Academics
 - **Admission** — Full pipeline: Enquiry → Application → Test → Interview → Offer → Enrolled
@@ -236,6 +261,22 @@ globussoft-open-school-mis/
 
 ## Testing
 
+### E2E API Tests (516 tests — 100% pass rate)
+
+```bash
+# Run comprehensive E2E tests against the live API
+node e2e-api-tests.js
+```
+
+The E2E test suite covers **all 350+ API endpoints** across 60+ modules including:
+- Auth (login, logout, refresh, password reset)
+- All CRUD operations (GET, POST, PATCH, DELETE)
+- Workflow transitions (publish, approve, reject, etc.)
+- Role-based access control validation
+- Error handling for missing fields and non-existent resources
+
+### Unit Tests
+
 ```bash
 cd packages/api
 npx jest --config test/jest-e2e.json --runInBand
@@ -289,11 +330,15 @@ We welcome contributions! Here's how you can help:
 - [ ] Multi-tenant (multi-school) support
 - [ ] Mobile app (React Native)
 - [ ] Internationalization (i18n)
-- [ ] Advanced analytics with charts
-- [ ] SMS/WhatsApp integration
-- [ ] Online payment gateway integration
+- [x] Advanced analytics with charts (role-based dashboards with trend charts)
+- [x] SMS/WhatsApp integration (notification triggers)
+- [ ] Online payment gateway integration (Razorpay/Stripe)
 - [ ] Biometric attendance integration
 - [ ] AI-powered insights and recommendations
+- [x] Smart timetable auto-generation with teacher conflict detection
+- [x] Real-time teaching tracker for smart classrooms
+- [x] Marketing website with pricing plans
+- [x] 516 E2E API tests with 100% endpoint coverage
 
 ---
 

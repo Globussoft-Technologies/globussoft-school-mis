@@ -2184,6 +2184,8 @@ model CourseModule {
   completionCriteria String @default("VIEW_ALL") // VIEW_ALL, SCORE_MINIMUM, MANUAL
   minimumScore  Float?
   estimatedMinutes Int?
+  daysToComplete Int      @default(7)
+  teacherId     String?
   createdBy     String
   createdAt     DateTime @default(now())
   updatedAt     DateTime @updatedAt
@@ -2485,4 +2487,42 @@ model LiveClassAttendance {
 
   @@unique([liveClassId, studentId])
   @@map("live_class_attendances")
+}
+
+// ─── Teaching Session Tracking ───────────────────────────────────────────────
+
+model TeachingSession {
+  id              String    @id @default(uuid())
+  moduleId        String
+  teacherId       String
+  classId         String
+  sectionId       String?
+  status          String    @default("IN_PROGRESS") // IN_PROGRESS, COMPLETED, PAUSED
+  startedAt       DateTime  @default(now())
+  completedAt     DateTime?
+  daysToComplete  Int       @default(7)
+  actualDays      Int?
+  remarks         String?
+  createdAt       DateTime  @default(now())
+  updatedAt       DateTime  @updatedAt
+
+  coverageLogs TopicCoverageLog[]
+
+  @@map("teaching_sessions")
+}
+
+model TopicCoverageLog {
+  id              String    @id @default(uuid())
+  sessionId       String
+  moduleItemId    String
+  teacherId       String
+  coveredAt       DateTime  @default(now())
+  duration        Int?      // minutes spent
+  method          String?   // LECTURE, VIDEO, DEMO, ACTIVITY, DISCUSSION
+  notes           String?
+
+  session TeachingSession @relation(fields: [sessionId], references: [id], onDelete: Cascade)
+
+  @@unique([sessionId, moduleItemId])
+  @@map("topic_coverage_logs")
 }

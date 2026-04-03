@@ -16,6 +16,9 @@ build/
 .env
 .env.local
 .env.*.local
+deploy.env
+vps_cmd.py
+deploy.py
 
 # IDE
 .vscode/

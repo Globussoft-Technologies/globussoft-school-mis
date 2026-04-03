@@ -99,6 +99,8 @@ import { LiveClassesModule } from './modules/live-classes/live-classes.module';
 import { CourseModulesModule } from './modules/course-modules/course-modules.module';
 import { DiscussionsModule } from './modules/discussions/discussions.module';
 import { GamificationModule } from './modules/gamification/gamification.module';
+// Phase 24 — Teaching Tracking
+import { TeachingModule } from './modules/teaching/teaching.module';
 // Audit
 import { AuditModule } from './modules/audit/audit.module';
 
@@ -203,6 +205,8 @@ import { AuditModule } from './modules/audit/audit.module';
     CourseModulesModule,
     DiscussionsModule,
     GamificationModule,
+    // Phase 24 — Teaching Tracking
+    TeachingModule,
     // Infrastructure Services (Global)
     FileUploadModule,
     EmailModule,

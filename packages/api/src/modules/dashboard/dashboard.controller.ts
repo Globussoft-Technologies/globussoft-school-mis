@@ -15,4 +15,19 @@ export class DashboardController {
   getStats(@CurrentUser('schoolId') schoolId: string) {
     return this.dashboardService.getStats(schoolId);
   }
+
+  @Get('admin-stats')
+  getAdminStats(@CurrentUser('schoolId') schoolId: string) {
+    return this.dashboardService.getAdminStats(schoolId);
+  }
+
+  @Get('teacher-stats')
+  getTeacherStats(@CurrentUser('sub') userId: string) {
+    return this.dashboardService.getTeacherStats(userId);
+  }
+
+  @Get('student-stats')
+  getStudentStats(@CurrentUser('sub') userId: string) {
+    return this.dashboardService.getStudentStats(userId);
+  }
 }

@@ -19,6 +19,7 @@ interface SubjectItem {
   id: string;
   name: string;
   code: string;
+  classId?: string;
 }
 
 interface ImportResult {
