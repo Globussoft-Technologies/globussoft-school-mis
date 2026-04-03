@@ -350,10 +350,10 @@ This project is open source and available under the [GNU Affero General Public L
 
 ## Acknowledgments
 
-Built with ❤️ by **Globussoft** — Technology Ahead of Time
+Built with ❤️ by **[Globussoft](https://globussoft.com)** — Technology Ahead of Time
 
 If you find this project useful, please give it a ⭐ on GitHub!
 
 ---
 
-**Globussoft Open School MIS** — Empowering schools with open-source technology.
+**[Globussoft Open School MIS](https://globussoft.com)** — Empowering schools with open-source technology.
